@@ -99,16 +99,16 @@ function create_car(xx, yy, width, height, wheelSize) {
             density: 0.0002
         });
 
-        var body2 = Bodies.rectangle(xx, yy, width-140, height-80, {
-            collisionFilter: {
-                group: group
-            },
-            render: {
-                fillStyle: 'lightgrey',
-                lineWidth: 0
-            },
-            density: 0.0002
-        });
+    var body2 = Bodies.rectangle(xx, yy, width - 140, height - 80, {
+        collisionFilter: {
+            group: group
+        },
+        render: {
+            fillStyle: 'lightgrey',
+            lineWidth: 0
+        },
+        density: 0.0002
+    });
 
     var wheelA = Bodies.circle(xx + wheelAOffset, yy + wheelYOffset, wheelSize, {
         collisionFilter: {
@@ -162,7 +162,7 @@ function create_car(xx, yy, width, height, wheelSize) {
         length: 0
     });
 
-    
+
     Composite.addBody(car, wheelA);
     Composite.addBody(car, wheelB);
     Composite.addBody(car, body2);
@@ -173,8 +173,6 @@ function create_car(xx, yy, width, height, wheelSize) {
 
     return car;
 };
-
-
 
 
 
