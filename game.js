@@ -20,31 +20,33 @@ var render = Render.create({
         width: 1000,
         height: 650,
         wireframes: false,
-        background: '#edebd1'
+        background: '#19343c'
     }
 });
 Engine.run(engine);
 Render.run(render);
 
+var groundColor = "#89877e"
+
 var car = create_car(150, 100, 150, 30, 40);
 var ground = Bodies.rectangle(400, 400, 8100, 30, {
     isStatic: true,
     render: {
-        fillStyle: '#1e6b28',
+        fillStyle: groundColor,
         lineWidth: 0
     }
 });
 var rotated_block_1 = Bodies.rectangle(200, 400, 200, 50, {
     isStatic: true,
     render: {
-        fillStyle: '#1e6b28',
+        fillStyle: groundColor,
         lineWidth: 0
     }
 });
 var rotated_block_2 = Bodies.rectangle(700, 450, 400, 200, {
     isStatic: true,
     render: {
-        fillStyle: '#1e6b28',
+        fillStyle: groundColor,
         lineWidth: 0
     }
 });
@@ -52,7 +54,7 @@ var rotated_block_2 = Bodies.rectangle(700, 450, 400, 200, {
 var rotated_block_3 = Bodies.rectangle(2000, 0, 200, 1000, {
     isStatic: true,
     render: {
-        fillStyle: '#1e6b28',
+        fillStyle: groundColor,
         lineWidth: 0
     }
 });
@@ -91,7 +93,18 @@ function create_car(xx, yy, width, height, wheelSize) {
                 radius: height * 0.5
             },
             render: {
-                fillStyle: '#5c5e5e',
+                fillStyle: '#c3613c',
+                lineWidth: 0
+            },
+            density: 0.0002
+        });
+
+        var body2 = Bodies.rectangle(xx, yy, width-140, height-80, {
+            collisionFilter: {
+                group: group
+            },
+            render: {
+                fillStyle: 'lightgrey',
                 lineWidth: 0
             },
             density: 0.0002
@@ -141,12 +154,22 @@ function create_car(xx, yy, width, height, wheelSize) {
         length: 0
     });
 
+    var body2Constraint = Constraint.create({
+        bodyB: body,
+        pointB: { x: 5, y: wheelYOffset },
+        bodyA: body2,
+        stiffness: 1,
+        length: 0
+    });
+
     
     Composite.addBody(car, wheelA);
     Composite.addBody(car, wheelB);
+    Composite.addBody(car, body2);
     Composite.addBody(car, body);
     Composite.addConstraint(car, axelA);
     Composite.addConstraint(car, axelB);
+    Composite.addConstraint(car, body2Constraint);
 
     return car;
 };

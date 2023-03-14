@@ -27,12 +27,17 @@ function update() {
     }
 
     if (87 in keysDown || 38 in keysDown) {
-        //Body.setAngularVelocity(car.bodies[2], 0.05)
-        Body.applyForce(car.bodies[2], { x: car.bodies[2].position.x, y: car.bodies[2].position.y }, { x: -0, y: -0.005 });
+        //Body.setAngularVelocity(car.bodies[2], 0.05)        
+        Body.setAngularVelocity(car.bodies[3], 0.05)
     }
 
     if (83 in keysDown || 40 in keysDown) {
-        Body.setAngularVelocity(car.bodies[2], -0.05)
+        Body.setAngularVelocity(car.bodies[3], -0.05)
+    }
+
+    if (32 in keysDown) {
+        Body.applyForce(car.bodies[3], { x: car.bodies[3].position.x, y: car.bodies[3].position.y }, { x: -0, y: -0.005 });
+        Body.setAngularVelocity(car.bodies[2], 0.3)
     }
 
 
