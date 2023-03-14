@@ -1,6 +1,8 @@
 var keysDown = {};
 var WheelSpeed = 0.2;
 var CameraFollow = 0;
+var power = 200;
+var maxPower = 200;
 function update() {
     if (16 in keysDown ) {
         WheelSpeed = 0.4;
@@ -36,10 +38,18 @@ function update() {
     }
 
     if (32 in keysDown) {
-        Body.applyForce(car.bodies[3], { x: car.bodies[3].position.x, y: car.bodies[3].position.y }, { x: -0, y: -0.005 });
-        Body.setAngularVelocity(car.bodies[2], 0.3)
+        if(power > 0){
+            Body.applyForce(car.bodies[3], { x: car.bodies[3].position.x, y: car.bodies[3].position.y }, { x: -0, y: -0.005 });
+            Body.setAngularVelocity(car.bodies[2], 0.3)
+            power--;
+        }
+    } else {
+        if(power < maxPower){
+            power++;
+        }
     }
 
+    document.getElementsByClassName("power")[0].innerHTML = power;
 
 }
 window.addEventListener('keydown', function (e) {
