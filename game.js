@@ -71,13 +71,22 @@ var rotated_block_3 = Bodies.rectangle(2000, 0, 200, 1000, {
     }
 });
 
+var rotated_block_4 = Bodies.rectangle(-300, 0, 20, 1000, {
+    isStatic: true,
+    render: {
+        fillStyle: groundColor,
+        lineWidth: 0
+    }
+});
+
 
 World.add(world, [
     car,
     ground,
     rotated_block_1,
     rotated_block_2,
-    rotated_block_3
+    rotated_block_3,
+    rotated_block_4
 ]);
 
 
