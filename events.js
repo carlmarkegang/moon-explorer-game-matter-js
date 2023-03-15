@@ -4,6 +4,8 @@ var CameraFollow = 0;
 var power = 200;
 var maxPower = 200;
 function update() {
+    Engine.update(engine, 1000 / 80);
+
     if (16 in keysDown ) {
         WheelSpeed = 0.4;
     } else {
@@ -51,6 +53,8 @@ function update() {
 
     document.getElementsByClassName("power")[0].innerHTML = power;
 
+    
+
 }
 window.addEventListener('keydown', function (e) {
     keysDown[e.keyCode] = true;
@@ -64,4 +68,5 @@ Events.on(render, 'beforeRender', function () {
         y: 400
     }, true);
 });
-let drawInterval = setInterval(update, 7);
+
+let drawInterval = setInterval(update, 20);

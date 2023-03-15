@@ -22,21 +22,26 @@ var render = Render.create({
         height: 650,
         wireframes: false,
         background: '#19343c',
-        showStats: true,
-        showPerformance: true,
+        //showStats: true,
+        //showPerformance: true,
         pixelRatio: 1
 
     }
 });
 
 
-var runner = Runner.create({
+/* Handling this in the update function instead
+var CreatedRunner = Runner.create({
     isFixed: true,
     fps: 60,
-  });  
+})  
+Render.run(render);
+Runner.run(CreatedRunner, engine);
+*/
 
 Render.run(render);
-Runner.run(runner, engine);
+
+
 
 var groundColor = "#89877e"
 
