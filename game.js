@@ -7,7 +7,8 @@ var Engine = Matter.Engine,
     Constraint = Matter.Constraint,
     Bodies = Matter.Bodies,
     Body = Matter.Body;
-Events = Matter.Events;
+    Events = Matter.Events;
+    Runner = Matter.Runner;
 // create engine
 var engine = Engine.create(), world = engine.world;
 engine.gravity.y = 0.4;
@@ -20,11 +21,22 @@ var render = Render.create({
         width: 1000,
         height: 650,
         wireframes: false,
-        background: '#19343c'
+        background: '#19343c',
+        showStats: true,
+        showPerformance: true,
+        pixelRatio: 1
+
     }
 });
-Engine.run(engine);
+
+
+var runner = Runner.create({
+    isFixed: true,
+    fps: 60,
+  });  
+
 Render.run(render);
+Runner.run(runner, engine);
 
 var groundColor = "#89877e"
 
