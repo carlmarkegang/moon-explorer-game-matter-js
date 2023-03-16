@@ -4,7 +4,7 @@ var CameraFollow = 0;
 var power = 200;
 var maxPower = 200;
 function update() {
-    Engine.update(engine, 1000 / 80);
+    Engine.update(engine, 1000 / 70);
 
     if (16 in keysDown ) {
         WheelSpeed = 0.4;
@@ -69,4 +69,4 @@ Events.on(render, 'beforeRender', function () {
     }, true);
 });
 
-let drawInterval = setInterval(update, 20);
+let drawInterval = setInterval(update, 25);
