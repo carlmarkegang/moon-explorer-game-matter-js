@@ -1,6 +1,10 @@
 
+
 var rotated_block_1 = Bodies.rectangle(200, 400, 200, 50, {
     isStatic: true,
+    chamfer: {
+        radius: 50 * 0.5
+    },
     render: {
         fillStyle: groundColor,
         lineWidth: 0
@@ -8,6 +12,9 @@ var rotated_block_1 = Bodies.rectangle(200, 400, 200, 50, {
 });
 var rotated_block_2 = Bodies.rectangle(700, 450, 400, 200, {
     isStatic: true,
+    chamfer: {
+        radius: 200 * 0.5
+    },
     render: {
         fillStyle: groundColor,
         lineWidth: 0
@@ -16,6 +23,9 @@ var rotated_block_2 = Bodies.rectangle(700, 450, 400, 200, {
 
 var rotated_block_3 = Bodies.rectangle(2000, 0, 200, 1000, {
     isStatic: true,
+    chamfer: {
+        radius: 200 * 0.5
+    },
     render: {
         fillStyle: groundColor,
         lineWidth: 0
@@ -24,6 +34,9 @@ var rotated_block_3 = Bodies.rectangle(2000, 0, 200, 1000, {
 
 var rotated_block_4 = Bodies.rectangle(-300, 0, 20, 1000, {
     isStatic: true,
+    chamfer: {
+                radius: 20 * 0.5
+    },
     render: {
         fillStyle: groundColor,
         lineWidth: 0
