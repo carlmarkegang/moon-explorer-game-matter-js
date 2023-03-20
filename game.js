@@ -46,37 +46,7 @@ Render.run(render);
 var groundColor = "#89877e"
 
 var car = create_car(150, 100, 150, 30, 40);
-var ground = Bodies.rectangle(400, 400, 8100, 30, {
-    isStatic: true,
-    render: {
-        fillStyle: groundColor,
-        lineWidth: 0
-    }
-});
-var rotated_block_1 = Bodies.rectangle(200, 400, 200, 50, {
-    isStatic: true,
-    render: {
-        fillStyle: groundColor,
-        lineWidth: 0
-    }
-});
-var rotated_block_2 = Bodies.rectangle(700, 450, 400, 200, {
-    isStatic: true,
-    render: {
-        fillStyle: groundColor,
-        lineWidth: 0
-    }
-});
-
-var rotated_block_3 = Bodies.rectangle(2000, 0, 200, 1000, {
-    isStatic: true,
-    render: {
-        fillStyle: groundColor,
-        lineWidth: 0
-    }
-});
-
-var rotated_block_4 = Bodies.rectangle(-300, 0, 20, 1000, {
+var ground = Bodies.rectangle(500, 1900, 8100, 3000, {
     isStatic: true,
     render: {
         fillStyle: groundColor,
@@ -85,23 +55,6 @@ var rotated_block_4 = Bodies.rectangle(-300, 0, 20, 1000, {
 });
 
 
-World.add(world, [
-    car,
-    ground,
-    rotated_block_1,
-    rotated_block_2,
-    rotated_block_3,
-    rotated_block_4
-]);
-
-
-
-Body.rotate(rotated_block_1, 0.7);
-Matter.Body.set(rotated_block_1, "position", { x: 300, y: 430 })
-
-Body.rotate(rotated_block_2, 0.3);
-
-Body.rotate(rotated_block_3, 0.4);
 
 function create_car(xx, yy, width, height, wheelSize) {
     var group = Body.nextGroup(true),
