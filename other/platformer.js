@@ -180,14 +180,3 @@
                 } 
             }
             
-            //this function detects the collision between the two given objects
-            function collisionBetween(p1, lvl) {
-                if (lvl.x < p1.x + p1.width &&
-                    lvl.x + lvl.width > p1.x &&
-                    lvl.y < p1.y + p1.height &&
-                    lvl.y + lvl.height > p1.y) {
-                    return true;
-                } else {
-                    return false;
-                } 
-            }
