@@ -20,6 +20,11 @@ function update() {
             CameraFollow -= 1;
         }
 
+        if(editLevel == true){
+            var selectedBlock = document.getElementById("selectedBlock").value;
+            Matter.Body.set( staticBlocks[selectedBlock], "position", { x: staticBlocks[selectedBlock].x, y: staticBlocks[selectedBlock].y })
+        }
+
     }
     if (65 in keysDown || 37 in keysDown) {
         Body.applyForce(car.bodies[0], { x: car.bodies[0].position.x, y: car.bodies[0].position.y }, { x: -0.001, y: 0 });

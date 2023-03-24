@@ -1,3 +1,5 @@
+var editLevel = true;
+
 var Engine = Matter.Engine,
     Render = Matter.Render,
     Composites = Matter.Composites,
@@ -152,6 +154,17 @@ function create_car(xx, yy, width, height, wheelSize) {
 
     return car;
 };
+
+var staticBlocks = [];
+
+function create_staticBlock(x, y, width, height, rotation = 0, roundness = 0) {
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
+    this.rotation = rotation;
+    this.roundness = roundness;
+}
 
 
 
