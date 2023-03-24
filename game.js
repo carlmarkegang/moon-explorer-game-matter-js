@@ -1,6 +1,7 @@
 var editLevel = true;
 if(editLevel == false){
     document.getElementById("spawnBlock").style.display = "none";
+    document.getElementById("spawn").style.display = "none";
 }
 
 var Engine = Matter.Engine,

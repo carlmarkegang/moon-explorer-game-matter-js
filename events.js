@@ -6,7 +6,7 @@ var maxPower = 200;
 function update() {
     Engine.update(engine, 1000 / 70);
 
-    if (16 in keysDown ) {
+    if (16 in keysDown) {
         WheelSpeed = 0.4;
     } else {
         WheelSpeed = 0.2;
@@ -14,6 +14,7 @@ function update() {
 
     // Edit level
     if (editLevel == true) {
+
         if (76 in keysDown) {
             placement_block_x += 2;
             Matter.Body.set(placement_block, "position", { x: placement_block_x, y: placement_block_y })
@@ -69,20 +70,20 @@ function update() {
     }
 
     if (32 in keysDown) {
-        if(power > 0){
+        if (power > 0) {
             Body.applyForce(car.bodies[3], { x: car.bodies[3].position.x, y: car.bodies[3].position.y }, { x: -0, y: -0.005 });
             Body.setAngularVelocity(car.bodies[2], 0.3)
             power--;
         }
     } else {
-        if(power < maxPower){
+        if (power < maxPower) {
             power++;
         }
     }
 
     document.getElementsByClassName("power")[0].innerHTML = power;
 
-    
+
 
 }
 window.addEventListener('keydown', function (e) {
