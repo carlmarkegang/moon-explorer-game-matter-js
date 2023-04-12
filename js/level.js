@@ -1,5 +1,4 @@
 // Created by setting var editLevel = true; in game.js
-
 staticBlocks.push(new create_staticBlock(200,400,200,50,0,0));
 staticBlocks.push(new create_staticBlock(-284,386,200,50,0.43500000000000033,0));
 staticBlocks.push(new create_staticBlock(538,506,500,500,0,0));
@@ -27,6 +26,19 @@ staticBlocks.push(new create_staticBlock(2742,326,700,700,2.4599999999999995,0))
 staticBlocks.push(new create_staticBlock(-858,-344,200,50,-0.7470000000000006,0));
 staticBlocks.push(new create_staticBlock(-778,-400,200,50,-9.197,0));
 staticBlocks.push(new create_staticBlock(-908,-362,200,50,-10.231,0));
+staticBlocks.push(new create_staticBlock(3640,362,1000,1000,2.3880000000000003,0));
+staticBlocks.push(new create_staticBlock(3950,22,1000,1000,1.8350000000000009,0));
+staticBlocks.push(new create_staticBlock(3492,598,1000,1000,1.590000000000001,0));
+staticBlocks.push(new create_staticBlock(4990,546,1000,1000,0.5700000000000007,0));
+staticBlocks.push(new create_staticBlock(5968,790,1000,1000,-2.2310000000000008,0));
+staticBlocks.push(new create_staticBlock(5334,828,1000,1000,0,0));
+staticBlocks.push(new create_staticBlock(6688,828,1000,1000,-0.12000000000000005,0));
+staticBlocks.push(new create_staticBlock(7168,788,1000,1000,-1.1760000000000008,0));
+staticBlocks.push(new create_staticBlock(8492,1316,1000,1000,-1.7110000000000007,0));
+staticBlocks.push(new create_staticBlock(7892,1280,1000,1000,-2.5440000000000005,0));
+staticBlocks.push(new create_staticBlock(9274,1616,1000,1000,-4.452,0));
+staticBlocks.push(new create_staticBlock(10170,1688,1000,1000,-4.997999999999999,0));
+staticBlocks.push(new create_staticBlock(9784,1752,1000,1000,-5.837999999999999,0));
 
 
 World.add(world, [
