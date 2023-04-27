@@ -5,29 +5,34 @@
 </head>
 
 <body style="margin: 0px; padding: 0px; background-color: rgb(74, 74, 74); font-family: sans-serif;color:white;">
-    <button id="spawnBlock" onclick="staticBlocks.push(new create_staticBlock(placement_block_x, placement_block_y, placement_block_width, placement_block_height,placement_block.angle));SpawnObjects();">Spawn</button>
+    <button id="spawnBlock"
+        onclick="staticBlocks.push(new create_staticBlock(placement_block_x, placement_block_y, placement_block_width, placement_block_height,placement_block.angle));SpawnObjects();">Spawn</button>
     <textarea id="spawn"></textarea>
     <br>
     <script src="matter/matter.js"></script>
     <script src="js/game.js"></script>
     <script src="js/events.js"></script>
     <script src="js/level.js"></script>
-    
+
     <style>
         .disabled {
             pointer-events: none;
             cursor: default;
             color: white;
         }
+
+        canvas {
+            display: block;
+        }
     </style>
     <p>Arrowkeys or WASD to drive.<br>
         Spacebar to fly<br>
         Shift to boost<br>
-        This game is just for fun. There is no objective to be completed :) 
+        This game is just for fun. There is no objective to be completed :)
     </p>
-        <strong class="power"></strong>
-        
-        
+    <strong class="power"></strong>
+
+
 </body>
 
 </html>
