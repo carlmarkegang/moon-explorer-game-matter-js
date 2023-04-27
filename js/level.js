@@ -1,4 +1,5 @@
 // Created by setting var editLevel = true; in game.js
+
 staticBlocks.push(new create_staticBlock(200,400,200,50,0,0));
 staticBlocks.push(new create_staticBlock(-284,386,200,50,0.43500000000000033,0));
 staticBlocks.push(new create_staticBlock(538,506,500,500,0,0));
@@ -39,6 +40,12 @@ staticBlocks.push(new create_staticBlock(7892,1280,1000,1000,-2.5440000000000005
 staticBlocks.push(new create_staticBlock(9274,1616,1000,1000,-4.452,0));
 staticBlocks.push(new create_staticBlock(10170,1688,1000,1000,-4.997999999999999,0));
 staticBlocks.push(new create_staticBlock(9784,1752,1000,1000,-5.837999999999999,0));
+staticBlocks.push(new create_staticBlock(11010,2532,2000,1000,0.07800000000000001,0));
+staticBlocks.push(new create_staticBlock(11808,2838,2000,1000,0.32500000000000023,0));
+staticBlocks.push(new create_staticBlock(12578,3174,2000,1000,-0.2580000000000003,0));
+staticBlocks.push(new create_staticBlock(13650,2530,2000,1000,-0.9380000000000008,0));
+staticBlocks.push(new create_staticBlock(14388,1806,2000,1000,-1.8740000000000008,0));
+staticBlocks.push(new create_staticBlock(14450,906,2000,1000,-2.666000000000001,0));
 
 
 World.add(world, [

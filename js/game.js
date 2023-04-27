@@ -1,4 +1,4 @@
-var editLevel = true;
+var editLevel = false;
 if(editLevel == false){
     document.getElementById("spawnBlock").style.display = "none";
     document.getElementById("spawn").style.display = "none";
